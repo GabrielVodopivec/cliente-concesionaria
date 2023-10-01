@@ -2,6 +2,7 @@
     "trailingComma": "none",
     "bracketSpacing": true,
     "bracketSameLine": true,
-    "proseWrap":"preserve",
-    "useTabs": true
+    "proseWrap": "preserve",
+    "useTabs": true,
+    "singleQuote": true
 }

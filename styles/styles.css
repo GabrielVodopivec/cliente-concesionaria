@@ -1,38 +1,65 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,600;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,600&display=swap");
 
+:root {
+    --rich-black: #0d1321ff;
+    --prussian-blue: #1d2d44ff;
+    --paynes-gray: #3e5c76ff;
+    --silver-lake-blue: #748cabff;
+    --eggshell: #f0ebd8ff;
+    --header-height: 70px;
+    --vehiclesBtn-height: 40px;
+    --table-border-radius: 10px;
+}
+
 html {
     font-family: "Nunito Sans", sans-serif;
 }
 
+body {
+    background-color: var(--rich-black);
+    color: var(--silver-lake-blue);
+    margin: 0;
+    padding: 0;
+}
+
 header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--prussian-blue);
     position: relative;
-}
-
-.button-container>button {
-    padding: 10px 20px;
-    font-size: 1.2em;
-    background-color: darkgoldenrod;
-    border: transparent;
-    border-radius: 5px;
-    color: antiquewhite;
-    cursor: pointer;
-
-}
-
-.button-container {
-    position: absolute;
-    left: 0;
+    height: var(--header-height);
+    margin-bottom: 20px;
 }
 
 h1 {
     text-align: center;
+    margin: 0;
 }
 
+.button-container {
+    top: calc((var(--header-height) - var(--vehiclesBtn-height))/2);
+    position: absolute;
+    left: 10vw;
+}
+
+.button-container>button {
+    height: var(--vehiclesBtn-height);
+    font-size: 1.2em;
+    background-color: var(--silver-lake-blue);
+    border: transparent;
+    border-radius: 5px;
+    color: antiquewhite;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+
 #vehicles-services-container {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-evenly;
-    height: 35vh;
-    overflow-y: scroll;
+    min-height: 35vh;
 }
 
 .servicesTable-container {
@@ -44,6 +71,7 @@ h1 {
 }
 
 #form-container {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
 }
@@ -52,28 +80,33 @@ table {
     display: block;
     margin: 10px 0;
     text-align: center;
-    border: 2px solid black;
-    border-radius: 5px;
+    border-radius: var(--table-border-radius);
     border-collapse: collapse;
     width: fit-content;
     height: fit-content;
 }
 
 th {
-    padding: 5px 10px;
-    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    background-color: black;
 }
 
 td {
-    border-top: 1px solid black;
-    padding: 5px 10px;
+    border-bottom: 1px solid var(--eggshell);
+    padding: 10px 10px;
 }
 
 caption {
     position: relative;
     font-size: large;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: var(--paynes-gray);
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    /* border-top-right-radius: calc(var(--table-border-radius) - 3px);
+    border-top-left-radius: calc(var(--table-border-radius) - 3px); */
     padding: 10px 0;
+    /* border: none; */
+    color: var(--eggshell);
 }
 
 caption>button {
@@ -83,17 +116,28 @@ caption>button {
     height: 25px;
     border-radius: 5px;
     border: transparent;
+    background-color: var(--eggshell);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 1.25em;
+    line-height: 0em;
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
 }
 
 form {
-    width: 350px;
+    box-sizing: border-box;
+    width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    background-color: burlywood;
+    background-color: var(--eggshell);
+    color: var(--prussian-blue);
     padding: 5px 10px;
     border-radius: 5px;
     margin: 10px;
+    height: fit-content;
 }
 
 .input-container {
@@ -107,10 +151,12 @@ form {
     border-radius: 5px;
     border: transparent;
     border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    width: 50%;
 }
 
 label {
-    width: 150px;
+    width: 50%;
+    padding-right: 10px;
     text-align: right;
     line-height: 2em;
 }
@@ -126,10 +172,14 @@ input[type="submit"] {
     padding: 10px 15px;
     border-radius: 5px;
     border: transparent;
-    background-color: cadetblue;
-    color: wheat;
+    background-color: var(--paynes-gray);
+    color: var(--eggshell);
     font-size: large;
     cursor: pointer;
+}
+
+input[type="date"] {
+    text-align: center;
 }
 
 h3 {
@@ -137,7 +187,7 @@ h3 {
 }
 
 .btn-detail {
-    background-color: burlywood;
+    background-color: var(--eggshell);
     padding: 2px 10px;
     border-radius: 5px;
     border: tomato;
