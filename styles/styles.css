@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,600;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,600&display=swap");
+
+html {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+header {
+    position: relative;
+}
+
+.button-container>button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: darkgoldenrod;
+    border: transparent;
+    border-radius: 5px;
+    color: antiquewhite;
+    cursor: pointer;
+
+}
+
+.button-container {
+    position: absolute;
+    left: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#vehicles-services-container {
+    display: flex;
+    justify-content: space-evenly;
+    height: 35vh;
+    overflow-y: scroll;
+}
+
+.servicesTable-container {
+    width: 30vw;
+}
+
+.vehiclesTable-container {
+    width: 60vw;
+}
+
+#form-container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    border-collapse: collapse;
+    width: fit-content;
+    height: fit-content;
+}
+
+th {
+    padding: 5px 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+td {
+    border-top: 1px solid black;
+    padding: 5px 10px;
+}
+
+caption {
+    position: relative;
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px 0;
+}
+
+caption>button {
+    position: absolute;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: transparent;
+}
+
+form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: burlywood;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.input-container>input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: transparent;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+label {
+    width: 150px;
+    text-align: right;
+    line-height: 2em;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    width: 150px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: cadetblue;
+    color: wheat;
+    font-size: large;
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+}
+
+.btn-detail {
+    background-color: burlywood;
+    padding: 2px 10px;
+    border-radius: 5px;
+    border: tomato;
+    cursor: pointer;
+}

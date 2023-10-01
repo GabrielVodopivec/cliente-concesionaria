@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles/styles.css">
+        <title>Concesionaria</title>
+    </head>
+    <body>
+        <header>
+
+            <div class="button-container">
+                <button id="showVehicles">Ver vehiculos</button>
+            </div>
+            <h1>Concesionaria</h1>
+        </header>
+        <main>
+
+            <div id="vehicles-services-container">
+                <div class="vehicleTable-container">
+                    <table id="vehicleTable">
+                        <caption>Vehículos</caption>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Fecha de fabricacion</th>
+                                <th>Kilometros</th>
+                                <th>Puertas</th>
+                                <th>Precio</th>
+                                <th>Moneda</th>
+                                <th>Owners</th>
+                                <th>Detalle</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tBodyVehicles"></tbody>
+                    </table>
+                </div>
+                <div class="servicesTable-container">
+                    <table id="servicesTable">
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Kilometros</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tBodyServices"></tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div id="form-container">
+                <form id="vehicleForm">
+                    <h3>Fomulario de Vehículos</h3>
+                    <div class="input-container">
+                        <label for="brand">Brand</label>
+                        <input id="brand" name="brand" type="text" value="Kia">
+                    </div>
+                    <div class="input-container">
+                        <label for="model">Model</label>
+                        <input id="model" name="model" type="text" value="Sorento">
+                    </div>
+                    <div class="input-container">
+                        <label for="numberOfKilometers">Kilometers</label>
+                        <input id="numberOfKilometers" name="numberOfKilometers" type="number" value="80000">
+                    </div>
+                    <div class="input-container">
+                        <label for="manufacturingDate">Manufacturing Date</label>
+                        <input id="manufacturingDate" name="manufacturingDate" type="date" value="2009-05-15">
+                    </div>
+                    <div class="input-container">
+                        <label for="doors">Doors</label>
+                        <input id="doors" name="doors" type="number" value="4">
+                    </div>
+                    <div class="input-container">
+                        <label for="price">Price</label>
+                        <input id="price" name="price" type="number" value="120000">
+                    </div>
+                    <div class="input-container">
+
+                        <label for="currency">Currency</label>
+                        <input id="currency" name="currency" type="text" value="AR">
+                    </div>
+                    <div class="input-container">
+
+                        <label for="owners">Owners</label>
+                        <input id="owners" name="countOfOwners" type="text" value="3">
+                    </div>
+                    <div class="submit-container">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+
+        </main>
+        <footer></footer>
+    </body>
+    <script type="module" src="./scripts/app.js"></script>
+    <script type="module" src="./scripts/formScripts.js"></script>
+</html>
