@@ -31,6 +31,7 @@
                                 <th>Moneda</th>
                                 <th>Owners</th>
                                 <th>Servicios</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody id="tBodyVehicles"></tbody>
@@ -39,6 +40,7 @@
                         <table id="servicesTable">
                             <thead>
                                 <tr>
+                                    <th>ID</th>
                                     <th>Fecha</th>
                                     <th>Kilometros</th>
                                     <th>Descripción</th>
@@ -50,7 +52,7 @@
                 </div>
                 <div id="form-container">
                     <form id="vehicleForm">
-                        <h3>Fomulario de Vehículos</h3>
+                        <h3>Fomulario Vehículo</h3>
                         <div class="input-container">
                             <label for="brand">Brand</label>
                             <input id="brand" name="brand" type="text" value="Kia">
@@ -77,13 +79,40 @@
                         </div>
                         <div class="input-container">
 
-                            <label for="currency">Currency</label>
-                            <input id="currency" name="currency" type="text" value="AR">
+                            <label>Currency</label>
+                            <div class="radios-container">
+                                <div class="radio-container">
+                                    <label for="ar">AR</label>
+                                    <input id="ar" name="currency" type="radio" value="AR" checked>
+                                </div>
+                                <div class="radio-container">
+                                    <label for="usd">USD</label>
+                                    <input id="usd" name="currency" type="radio" value="USD">
+                                </div>
+                            </div>
                         </div>
                         <div class="input-container">
 
                             <label for="owners">Owners</label>
                             <input id="owners" name="countOfOwners" type="text" value="3">
+                        </div>
+                        <div class="service-form-contariner">
+                            <h3>Formulario Servicio</h3>
+                            <div class="input-container">
+                                <label for="date">Fecha</label>
+                                <input id="date" name="date" type="date" value="2010-06-22">
+                            </div>
+                            <div class="input-container">
+                                <label for="kilometers">Kilometros</label>
+                                <input id="kilometers" name="kilometers" type="number" value="95000">
+                            </div>
+                            <div class="input-container">
+                                <label for="descriptions">Descripción</label>
+                                <input id="descriptions" name="descriptions" type="text" value="Limpieza de Inyectores">
+                            </div>
+                            <div class="submit-container">
+                                <button id="addService-btn" type="button">Agregar servicio</button>
+                            </div>
                         </div>
                         <div class="submit-container">
                             <input type="submit" value="Send">

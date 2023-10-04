@@ -4,5 +4,5 @@
     "bracketSameLine": true,
     "proseWrap": "preserve",
     "useTabs": true,
-    "singleQuote": true
+    "singleQuote": false
 }

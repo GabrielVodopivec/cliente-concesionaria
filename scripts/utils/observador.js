@@ -1,3 +1,5 @@
+import { serviceInfo } from "./formDataProcessor.js";
+
 export class Observer {
 	constructor(action) {
 		this.action = action;
@@ -17,6 +19,7 @@ export class Observable {
 	}
 
 	notify() {
+		serviceInfo.length = 0;
 		this.suscriptor.notifyMe();
 	}
 }

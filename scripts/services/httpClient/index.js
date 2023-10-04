@@ -1,4 +1,4 @@
-import { baseURL } from '../../../config/appconfig.js';
+import { baseURL } from "../../../config/appconfig.js";
 
 class HttpClient {
 	constructor(baseURL) {
@@ -22,6 +22,16 @@ class HttpClient {
 		const request = new Request(`${this.baseURL}/${url}`, options);
 		const response = await fetch(request);
 		return response;
+	}
+
+	async delete(id) {
+		const options = {
+			method: "DELETE"
+		};
+		const request = new Request(`${this.baseURL}/${id}`, options);
+		const response = await fetch(request);
+		const json = await response.json();
+		return json;
 	}
 }
 
