@@ -8,15 +8,9 @@ export let updatedResult = {};
 const addValue = (result, name, value) => {
 	const names = { descriptions, date, kilometers };
 	if (name in names) {
-		serviceData = {
-			...serviceData,
-			[name]: value
-		};
+		serviceData = { ...serviceData, [name]: value };
 	} else {
-		updatedResult = {
-			...result,
-			[name]: value
-		};
+		updatedResult = { ...result, [name]: value };
 	}
 
 	updatedResult.services = [...serviceInfo, serviceData];
@@ -25,19 +19,15 @@ const addValue = (result, name, value) => {
 
 const handleClickServiceBtn = ({ date, kilometers, descriptions }) => {
 	serviceInfo = [
-		...serviceInfo,
-		{
+		...serviceInfo, {
 			date,
 			kilometers,
 			descriptions
-		}
-	];
+		}];
 };
 
 addServiceBtn.onclick = () => {
-	let {
-		elements: { kilometers, descriptions, date }
-	} = vehicleForm;
+	let { elements: { kilometers, descriptions, date } } = vehicleForm;
 	handleClickServiceBtn({
 		kilometers: kilometers.value,
 		descriptions: descriptions.value,

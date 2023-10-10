@@ -1,4 +1,4 @@
-import { baseURL } from "../../../config/appconfig.js";
+import { baseURL } from "../config/appconfig.js";
 
 class HttpClient {
 	constructor(baseURL) {
@@ -7,6 +7,7 @@ class HttpClient {
 
 	async getAllData(path) {
 		const request = new Request(`${this.baseURL}${path}`);
+		// const response = await fetch("../../fakeData/data.json");
 		const response = await fetch(request);
 		return response.json();
 	}

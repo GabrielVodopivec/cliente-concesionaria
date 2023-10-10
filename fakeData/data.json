@@ -1,0 +1,37 @@
+{
+    "result": [
+        {
+            "id": 1,
+            "brand": "Toyota",
+            "model": "Corolla",
+            "manufacturingDate": "2022-05-15",
+            "kilometers": 15000,
+            "doors": 4,
+            "price": 20000,
+            "currency": "USD",
+            "countOfOwners": 1
+        },
+        {
+            "id": 2,
+            "brand": "Honda",
+            "model": "Civic",
+            "manufacturingDate": "2020-09-10",
+            "kilometers": 22000,
+            "doors": 4,
+            "price": 18000,
+            "currency": "USD",
+            "countOfOwners": 2
+        },
+        {
+            "id": 3,
+            "brand": "Ford",
+            "model": "Focus",
+            "manufacturingDate": "2021-11-25",
+            "kilometers": 18000,
+            "doors": 5,
+            "price": 21000,
+            "currency": "USD",
+            "countOfOwners": 1
+        }
+    ]
+}

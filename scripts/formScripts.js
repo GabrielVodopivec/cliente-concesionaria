@@ -1,22 +1,22 @@
-import { observer } from './app.js';
-import { httpClient } from './services/httpClient/index.js';
-import { Observable } from './utils/observador.js';
-import { datosObtenidosDel } from './utils/formDataProcessor.js';
+import { postObserver } from "./app.js";
+import { httpClient } from "./services/httpClient/index.js";
+import { Observable } from "./utils/observador.js";
+import { datosObtenidosDel } from "./utils/formDataProcessor.js";
 
-let vehicleForm = document.getElementById('vehicleForm');
+let vehicleForm = document.getElementById("vehicleForm");
 
 const observable = new Observable();
-observable.suscribe(observer);
+observable.suscribe(postObserver);
 
 function getRequestConfig(event) {
 	const { target } = event;
 	const { elements: vehicle } = target;
 	const json = JSON.stringify(datosObtenidosDel(vehicle));
 	const requestConfig = {
-		url: '',
-		method: 'POST',
-		mode: 'cors',
-		headers: { 'Content-Type': 'application/json' },
+		url: "",
+		method: "POST",
+		mode: "cors",
+		headers: { "Content-Type": "application/json" },
 		body: json
 	};
 
@@ -33,7 +33,7 @@ const handleSubmit = async (event) => {
 		observable.notify();
 	} else {
 		const errorJson = await response.json();
-		console.log('Error: ', errorJson);
+		console.log("Error: ", errorJson);
 	}
 };
 
